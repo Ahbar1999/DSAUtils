@@ -49,7 +49,7 @@ class TrieNode {
 	} 
 
 	void insert_str(int i, string s) {
-		this->insert_dfs(root, i, s, term);	
+		this->insert_dfs(root, i, s);	
 	}
 	
 	// return longest commong/matching prefix 
