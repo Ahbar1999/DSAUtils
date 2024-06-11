@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build",
+  "command": "C:\\w64devkit\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp  -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\main.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.obj"
+}
+]
