@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named DSA
+
+# Build rule for target.
+DSA: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DSA
+.PHONY : DSA
+
+# fast build rule for target.
+DSA/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSA.dir\build.make CMakeFiles/DSA.dir/build
+.PHONY : DSA/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -127,6 +140,30 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+dsa/strings/trie.obj: dsa/strings/trie.cpp.obj
+.PHONY : dsa/strings/trie.obj
+
+# target to build an object file
+dsa/strings/trie.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSA.dir\build.make CMakeFiles/DSA.dir/dsa/strings/trie.cpp.obj
+.PHONY : dsa/strings/trie.cpp.obj
+
+dsa/strings/trie.i: dsa/strings/trie.cpp.i
+.PHONY : dsa/strings/trie.i
+
+# target to preprocess a source file
+dsa/strings/trie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSA.dir\build.make CMakeFiles/DSA.dir/dsa/strings/trie.cpp.i
+.PHONY : dsa/strings/trie.cpp.i
+
+dsa/strings/trie.s: dsa/strings/trie.cpp.s
+.PHONY : dsa/strings/trie.s
+
+# target to generate assembly for a file
+dsa/strings/trie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DSA.dir\build.make CMakeFiles/DSA.dir/dsa/strings/trie.cpp.s
+.PHONY : dsa/strings/trie.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -160,7 +197,11 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... DSA
 	@echo ... main
+	@echo ... dsa/strings/trie.obj
+	@echo ... dsa/strings/trie.i
+	@echo ... dsa/strings/trie.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

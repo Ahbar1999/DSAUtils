@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "../include/trie.h"
 
 class TrieNode {
 	private:

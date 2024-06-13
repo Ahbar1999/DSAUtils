@@ -24,13 +24,29 @@ class SuffixArrays {
 			return (this->s.substr(i, pattern.size()) == pattern) ? i : -1;  
 		}
 
+		// lcp(i, j) = longest common prefix of two suffixes: s[i..n-1] and s[j..n-1]
+		/*	
+		 *	1) calculate lcp of adjacent suffixes in the suffix array
+		 *		eg. lcp[i] store lcp between suffix[i] and suffix[i + 1]
+		 *	2) lcp(i, j) where i and j are not adjacent is given by:
+		 *		min(lcp[pos[i]..pos[j] -1]); 
+		 *			this works because the suffixes are sorted so all the suffixes
+		 *			inbetween have the same common prefix
+		 *		hence our problem becomes: finding the minimmum in a segment which can be solved by:
+		 *								build		query	
+		 *			1) segment tree 	O(n)		O(logn)
+		 *			2) sparse table	O(nlogn)		O(1)
+		 *
+		 *		sparse table approach is better because we dont have dyanmic input(string s) and query is faster 
+		 * */
+		
+
 	private:
 		std::string s;
 		int n;
 		// p: stores the starting index(rightmost) of a suffix
 		// c: stores equivalence classes/labels of the suffixes; 0 <= c[i] < s.size() 
-		std::vector<int> p; 
-		std::vector<int> c;
+		std::vector<int> p, c, lcp;
 		/*
 		// RADIX SORT is too complicated to use and just using regular sort() should be good enough
 		void radix_sort(std::vector<std::pair<std::pair<int, int>, int>>& a) {
@@ -92,5 +108,12 @@ class SuffixArrays {
 
 			for (int i = 0; i < n; i++) std::cout << s.substr(p[i], n  -p[i]) << "\n";
 		}
+		/*
+		void build_lcp() {
+			for (int i = 0; i < n - 1; i++) {
+				int j = 0;
 
+			}
+		}
+		*/
 };
