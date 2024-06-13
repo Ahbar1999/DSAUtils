@@ -16,12 +16,21 @@ class SuffixArrays {
 			this->make_transitions();
 		}
 
+		int substring_search(std::string pattern) {
+			// each susbtring is a prefix of some suffix
+			auto i = *std::lower_bound(this->p.begin(), this->p.end(), pattern, [this](int i, std::string p) {
+				return this->s.substr(i, -1) <= p;
+			});
+			return (this->s.substr(i, pattern.size()) == pattern) ? i : -1;  
+		}
+
 	private:
 		std::string s;
 		int n;
 		// p: stores the starting index(rightmost) of a suffix
 		// c: stores equivalence classes/labels of the suffixes; 0 <= c[i] < s.size() 
-		std::vector<int> p, c;
+		std::vector<int> p; 
+		std::vector<int> c;
 		/*
 		// RADIX SORT is too complicated to use and just using regular sort() should be good enough
 		void radix_sort(std::vector<std::pair<std::pair<int, int>, int>>& a) {
@@ -40,7 +49,6 @@ class SuffixArrays {
 			}
 		}
 		*/
-
 		// initialize out suffix arrays with 1 element suffixes and sort them
 		// transitions will be made in make_transitions function  
 		void init() {

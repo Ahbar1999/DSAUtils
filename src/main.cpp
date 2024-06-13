@@ -25,6 +25,9 @@ int main() {
 	std::cout << s << std::endl;
 	std::cout << std::endl;
 	auto sa = SuffixArrays(s);
+	std::cout << "babb found at: " << sa.substring_search("babb") << std::endl;
+	std::cout << "babbb fount at: " << sa.substring_search("babbb") << std::endl;
+	std::cout << "ba fount at: " << sa.substring_search("ba") << std::endl;
 	
 	return 0;
 };
