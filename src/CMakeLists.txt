@@ -10,6 +10,7 @@ project(DSAUtils LANGUAGES C CXX)
 add_executable(main 
 	main.cpp
 	strings/trie.h
+	strings/suffix_arrays.h
 	for_range_queries/fenwick_tree.h)
 
 

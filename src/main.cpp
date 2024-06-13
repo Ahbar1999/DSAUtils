@@ -1,5 +1,7 @@
 #include <iostream>
 #include "./strings/trie.h"
+#include "./strings/suffix_arrays.h"
+
 
 void test_trie() {
 	auto root = TrieNode('$', false);
@@ -19,7 +21,10 @@ void test_suffix_arrays() {
 }
 
 int main() {
-	std::cout << "hello" << std::endl;
+	std::string s = "ababba";
+	std::cout << s << std::endl;
+	std::cout << std::endl;
+	auto sa = SuffixArrays(s);
 	
 	return 0;
 };
