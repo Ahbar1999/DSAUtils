@@ -34,6 +34,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.0-rc1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.30.0-rc1/CMakeSystem.cmake"
   "C:/Users/Ahbar/Desktop/DSAUtils/src/CMakeLists.txt"
+  "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -45,10 +46,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dsa/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/DSA.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
+  "dsa/CMakeFiles/DSA.dir/DependInfo.cmake"
   )

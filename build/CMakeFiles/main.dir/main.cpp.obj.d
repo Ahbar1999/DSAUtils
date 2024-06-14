@@ -1,5 +1,6 @@
 CMakeFiles/main.dir/main.cpp.obj: \
  C:\Users\Ahbar\Desktop\DSAUtils\src\main.cpp \
+ c:\users\ahbar\desktop\dsautils\src\dsa\include\trie.h \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\iostream \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\x86_64-w64-mingw32\bits\c++config.h \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\x86_64-w64-mingw32\bits\os_defines.h \
@@ -138,9 +139,17 @@ CMakeFiles/main.dir/main.cpp.obj: \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\ostream.tcc \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\istream \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\istream.tcc \
- c:\users\ahbar\desktop\dsautils\src\dsa\include\trie.h \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\vector \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_uninitialized.h \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_vector.h \
  c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_bvector.h \
- c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\vector.tcc
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\vector.tcc \
+ c:\users\ahbar\desktop\dsautils\src\dsa\include\suffix_arrays.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\algorithm \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_algo.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\algorithmfwd.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_heap.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\stl_tempbuf.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\bits\uniform_int_dist.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\pstl\glue_algorithm_defs.h \
+ c:\w64devkit\lib\gcc\x86_64-w64-mingw32\12.2.0\include\c++\pstl\execution_defs.h

@@ -1,14 +1,38 @@
 [
 {
   "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build",
-  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\dsa\\strings\\trie.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\strings\\trie.cpp",
-  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/strings/trie.cpp",
-  "output": "CMakeFiles/DSA.dir/dsa/strings/trie.cpp.obj"
-},
-{
-  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build",
-  "command": "C:\\w64devkit\\bin\\c++.exe  @CMakeFiles/main.dir/includes_CXX.rsp  -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\main.cpp",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\main.cpp",
   "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/main.cpp",
   "output": "CMakeFiles/main.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build/dsa",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\strings\\trie.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\strings\\trie.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/strings/trie.cpp",
+  "output": "dsa/CMakeFiles/DSA.dir/strings/trie.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build/dsa",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\strings\\suffix_arrays.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\strings\\suffix_arrays.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/strings/suffix_arrays.cpp",
+  "output": "dsa/CMakeFiles/DSA.dir/strings/suffix_arrays.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build/dsa",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\strings\\string_hashing.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\strings\\string_hashing.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/strings/string_hashing.cpp",
+  "output": "dsa/CMakeFiles/DSA.dir/strings/string_hashing.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build/dsa",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\for_range_queries\\fenwick_tree.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\for_range_queries\\fenwick_tree.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/for_range_queries/fenwick_tree.cpp",
+  "output": "dsa/CMakeFiles/DSA.dir/for_range_queries/fenwick_tree.cpp.obj"
+},
+{
+  "directory": "C:/Users/Ahbar/Desktop/DSAUtils/build/dsa",
+  "command": "C:\\w64devkit\\bin\\c++.exe    -o CMakeFiles\\DSA.dir\\for_range_queries\\segment_tree.cpp.obj -c C:\\Users\\Ahbar\\Desktop\\DSAUtils\\src\\dsa\\for_range_queries\\segment_tree.cpp",
+  "file": "C:/Users/Ahbar/Desktop/DSAUtils/src/dsa/for_range_queries/segment_tree.cpp",
+  "output": "dsa/CMakeFiles/DSA.dir/for_range_queries/segment_tree.cpp.obj"
 }
 ]

@@ -1,7 +1,7 @@
 #include <vector>
 #include <stdio.h>
+#include "../include/segment_tree.h"
 
-class Segment_Tree {
 	/*	POINTS TO REMEMBER
 	 *		-> if root node starts at index 0 
 	 *			then left and right child are at 2 * node + 1, 2 * node + 2 respectively
@@ -11,11 +11,3 @@ class Segment_Tree {
 	 * */
 	// Leaving the implementation details because segment tree implementation
 	// heavily depends on the type of operations required
-	public:
-		Segment_Tree(std::vector<int>& arr, int n) {
-			this->tree.resize(4 * n); 
-		}
-	private:
-		std::vector<int> tree;
-
-};

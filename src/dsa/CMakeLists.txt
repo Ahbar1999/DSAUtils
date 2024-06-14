@@ -1,18 +1,19 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(DSAUtils LANGUAGES C CXX)
+project(DSA LANGUAGES C CXX)
 # libraries are static by default
-# TODO : set flag here to output config_flags.json
 
-add_subdirectory(dsa)	# our library, has its won cmake build
-add_executable(main main.cpp)
+add_library(DSA STATIC 
+	./strings/trie.cpp
+	./strings/suffix_arrays.cpp
+	./strings/string_hashing.cpp
+	./for_range_queries/fenwick_tree.cpp
+	./for_range_queries/segment_tree.cpp
+)
 
-
-# target_include_directories(main PRIVATE 
-	# include
-	# )
-# link main target and DSA library
-target_link_libraries(main PRIVATE DSA)
+# target_include_directories(DSA PUBLIC 
+# 	include
+# )
 
 # TODO
 # 	define a source variable and recursively append all the files in current working directory to this variable

@@ -1,4 +1,6 @@
-C:/Users/Ahbar/Desktop/DSAUtils/build/CMakeFiles/DSA.dir
 C:/Users/Ahbar/Desktop/DSAUtils/build/CMakeFiles/main.dir
 C:/Users/Ahbar/Desktop/DSAUtils/build/CMakeFiles/edit_cache.dir
 C:/Users/Ahbar/Desktop/DSAUtils/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Ahbar/Desktop/DSAUtils/build/dsa/CMakeFiles/DSA.dir
+C:/Users/Ahbar/Desktop/DSAUtils/build/dsa/CMakeFiles/edit_cache.dir
+C:/Users/Ahbar/Desktop/DSAUtils/build/dsa/CMakeFiles/rebuild_cache.dir
