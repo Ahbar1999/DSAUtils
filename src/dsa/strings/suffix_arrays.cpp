@@ -81,7 +81,6 @@ void SuffixArrays::make_transitions() {
 		k++;
 	}
 
-	for (int i = 0; i < n; i++) std::cout << s.substr(p[i], n  -p[i]) << "\n";
 }
 
 int SuffixArrays::substring_search(std::string pattern) {
@@ -93,5 +92,19 @@ int SuffixArrays::substring_search(std::string pattern) {
 }
 
 void SuffixArrays::build_lcp() {
-	std::cout << "TODO!" << std::endl;	
+	int k = 0;	// character to skip during comparison of current two suffixes
+	// lcp of two consecutive suffixes, s[i] and s[i - 1]
+	for (int i = 0; i < this->n - 1; i++) {
+		// we need position of each suffix in the suffix array
+		// we have p[i] which gives a suffix for each position
+		// array c contains **inverse permutation** of p which is what we need
+		// since we are starting from index = 0 we start with the largest suffixes
+		// at any point we consider the largest suffix and the one before it in the suffix array (sorted order)
+		int pi = this->c[i];	// this is the position of suffix[i] in the array p i.e. suffix array
+		int j = p[pi - 1];		// this is s[i - 1] i.e. the previous suffix in the suffix array
+		// lcp[i] = lcp(s[i..], s[j..])
+		while(s[i + k] == s[j + k]) k++;	// k also represents the number of equal characters between the current two suffixes 
+		this->lcp[pi] = k;	// longest common prefix between suffix[i] and suffix[i - 1] 
+		k = std::max(0, k - 1);	
+	}
 }

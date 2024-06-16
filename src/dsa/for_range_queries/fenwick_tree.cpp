@@ -7,8 +7,10 @@
 // BIT: Binary Indexed Tree
 void BIT::set(int i, int x) {
 	std::cout << "TODO!" << std::endl;
+
 	// update bit_array[j] for all j's that i is responsible for
-	// handle the case for new element's addition
+	
+	// also handle the case for new element's addition
 } 
 
 int BIT::get_sum(int i, int j) {
