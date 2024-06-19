@@ -21,6 +21,7 @@ void test_suffix_arrays() {
 }
 
 int main() {
+
 	test_trie();
 	std::cout << std::endl;
 	std::string s = "ababba";
@@ -29,7 +30,14 @@ int main() {
 	auto sa = SuffixArrays(s);
 	std::cout << "babb found at: " << sa.substring_search("babb") << std::endl;
 	std::cout << "babbb fount at: " << sa.substring_search("babbb") << std::endl;
-	std::cout << "ba fount at: " << sa.substring_search("ba") << std::endl;	
+	std::cout << "ba fount at: " << sa.substring_search("ba") << std::endl;
+	std::cout << "Number of unique substrings: " << sa.cnt_unique_substrs() << std::endl;
+	
+	s = "aabba";
+	s += '#';
+	s += "baba";
+	sa = SuffixArrays(s);
+	std::cout << "Longest common substring result: " << sa.longest_common_substr() << std::endl;
 	
 	return 0;
 };
