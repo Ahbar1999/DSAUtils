@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(DSAUtils LANGUAGES C CXX)
+set (CMAKE_CXX_FLAGS "-std=c++17")
 # libraries are static by default
 # TODO : set flag here to output config_flags.json
 
 add_subdirectory(dsa)	# our library, has its won cmake build
 add_executable(main main.cpp)
-
 
 # target_include_directories(main PRIVATE 
 	# include
