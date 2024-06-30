@@ -20,6 +20,11 @@ class Hashed_string {
 			this->h.resize(s.size());
 			this->init_h();
 		}
+
+		// Rabin Karp matcher 
+		// assuming s is our text
+		// find all occurances of pattern 'p' in s in O(|p| + |s|) 
+		std::vector<int> RK_Matcher(std::string& p);	
 		
 		int get_hash(int i, int j); 
 };
