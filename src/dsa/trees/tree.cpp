@@ -46,6 +46,7 @@ Tree::Tree(std::vector<int>& parent): tree_max_dist(std::ceil(std::log2(parent.s
 }
 
 int Tree::lca(int a, int b) {
+	// 1st method 
 	// lift both nodes to a common level then decrement levels until you reach the same node or root
 	
 	if (this->depth[a] < this->depth[b]) return this->lca(b, a);	// swap so that we have higher depth node as 'a'
@@ -64,7 +65,47 @@ int Tree::lca(int a, int b) {
 	}
 
 	return this->jumping_table[a][0];	// lca will be the parent of either node
+
+	/* 2nd method: euler tour tree */
+	// depth array must have been filled by euler tour constructor
+	// return node with min(depth[a..k])
+
+	/* 3rd method: tarjan's */
 }
+
+// merge two disjoin sets
+void dsu_union(int x, int y, std::vector<int>& p) {
+	p[y] = dsu_find(x, p);	
+}
+
+// find parent
+int dsu_find(int x, std::vector<int>& p) {
+	if (p[x] == x) return x;
+	return p[x] = dsu_find(p[x], p);	// find with path compression
+}
+
+int lca_Tarjan(TreeNode* node, int a, int b, std::vector<int>& p) {
+	p[node->val] = node->val;	// add node as its own parent
+	int ans = -1;
+	if (node->left) {
+		ans = lca_Tarjan(node->left, a, b, p);
+		dsu_union(node->val, dsu_find(node->left->val, p), p);
+	}
+	if (ans != -1) return ans;
+	if (node->right) {
+		ans = lca_Tarjan(node->right, a, b, p);
+		dsu_union(node->val, dsu_find(node->right->val, p), p);
+	}
+
+	if (node->val == a) {
+		if (p[b] != -1) return dsu_find(b, p);
+	} else if (node->val == b) {
+		if (p[a] != -1) return dsu_find(a, p);
+	}
+
+	return ans;
+}
+
 
 int Tree::kth_ancestor(int a, int k) {
 	int at = a;	// starting position of kth ancestor
@@ -75,7 +116,4 @@ int Tree::kth_ancestor(int a, int k) {
 		}
 	}
 	return at;
-	/* euler tour tree method */
-	// depth array must have been filled by euler tour constructor
-	// return node with min(depth[a..k]) 
 }
