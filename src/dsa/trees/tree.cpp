@@ -1,8 +1,27 @@
 #include <cmath>
 #include <iostream>
+#include <vector>
 #include "../include/tree.h"
 
-// constructor
+// constructor 2
+// input: root of a binary tree given by class TreeNode
+Tree::Tree(TreeNode* root) : tree_max_dist(0) {
+	// build et_tree;
+	fill_et_tree(root, this->et_tree);
+	// also fill depth array
+	// if duplicate values for nodes exist in the tree
+	// maintain a unique id for each node 
+}
+
+void fill_et_tree(TreeNode* node, std::vector<int>& arr) {
+	if (node == nullptr) return;
+	fill_et_tree(node->left, arr);
+	arr.push_back(node->val);
+	// also add depth for each node	
+	fill_et_tree(node->right, arr);
+}
+
+// constructor 1
 // input: an array with ith node's immediate parent at parent[i], this should also include root node with value = -1 
 Tree::Tree(std::vector<int>& parent): tree_max_dist(std::ceil(std::log2(parent.size()))) {
 	this->parent = parent;
@@ -56,4 +75,7 @@ int Tree::kth_ancestor(int a, int k) {
 		}
 	}
 	return at;
+	/* euler tour tree method */
+	// depth array must have been filled by euler tour constructor
+	// return node with min(depth[a..k]) 
 }
